@@ -1,0 +1,139 @@
+/* ==========================================================================
+   VARIABLES CSS (:root)
+   ========================================================================== */
+:root {
+    --color-fondo-pagina: #f1f5f9;
+    --color-fondo-tarjeta: #ffffff;
+    --color-texto-principal: #1e293b;
+    --color-texto-secundario: #64748b;
+    --color-acento: #598bf6;
+    --color-acento-hover: #1d4ed8;
+    --color-placeholder-img: #3b82f6;
+    --color-borde: #e2e8f0;
+}
+
+/* ==========================================================================
+   RESET Y ESTILOS GENERALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo-pagina);
+    color: var(--color-texto-principal);
+    line-height: 1.5;
+    padding: 24px;
+}
+
+/* Cabecera */
+.header-principal {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.header-principal h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* Contenedor Principal */
+.contenedor-galeria {
+    background-color: #ffffff;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.contenedor-galeria h2 {
+    font-size: 1.3rem;
+    color: #1e3a8a;
+    border-bottom: 2px solid var(--color-borde);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   MAQUETACIÓN DE TARJETAS (DISPLAY: INLINE-BLOCK)
+   ========================================================================== */
+.fila-productos {
+    text-align: left;
+}
+
+.tarjeta-producto {
+    /* Alineación una al lado de la otra conservando modelo de caja */
+    display: inline-block;
+    vertical-align: top;
+    
+    width: 260px;
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 16px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+    
+    /* Box Model y sombras */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen simulada (cuadrado de color) */
+.imagen-simulada {
+    width: 100%;
+    height: 140px;
+    background-color: var(--color-placeholder-img);
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+/* Tipografía de la tarjeta */
+.titulo-producto {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-texto-principal);
+    margin-bottom: 8px;
+}
+
+.descripcion-producto {
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.4;
+    margin-bottom: 16px;
+    min-height: 50px;
+}
+
+/* ==========================================================================
+   BOTÓN CON PSEUDOCLASE :hover
+   ========================================================================== */
+.btn-comprar {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--color-acento);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-comprar:hover {
+    background-color: var(--color-acento-hover);
+}
+
+/* Footer */
+.footer-principal {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario);
+}

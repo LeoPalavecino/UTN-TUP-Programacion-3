@@ -1,0 +1,243 @@
+/* ==========================================================================
+   6. VARIABLES CSS (:root)
+   ========================================================================== */
+:root {
+    --color-fondo: #ffffff;
+    --color-texto: #2d3748;
+    --color-acento: #2563eb;
+        
+}
+
+/* ==========================================================================
+   ESTILOS GENERALES Y RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+    background-color: #f1f5f9;
+    padding: 24px;
+    line-height: 1.6;
+}
+
+.main-header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+}
+
+.seccion {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+}
+
+.seccion h2 {
+    color: #1e3a8a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   2. SELECTORES EN CSS
+   ========================================================================== */
+/* Selector por ID */
+#parrafo-id {
+    color: #047857;
+    font-weight: bold;
+    background-color: #d1fae5;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* Selector por Clase */
+.parrafo-class {
+    color: #b45309;
+    font-style: italic;
+    background-color: #fef3c7;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+/* Selector por Tag/Etiqueta (afecta párrafos directos de la sección) */
+section p {
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   3. MODIFICACIÓN DE TEXTO
+   ========================================================================== */
+/* Título con sombra y mayúsculas */
+.titulo-sombra {
+    text-transform: uppercase;
+    color: #1d4ed8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+}
+
+/* Párrafo con line-height amplio y letter-spacing grande */
+.texto-espaciado {
+    line-height: 2.2;
+    letter-spacing: 2.5px;
+    background-color: #f8fafc;
+    padding: 10px;
+    border-left: 3px solid #3b82f6;
+    margin-bottom: 12px;
+}
+
+/* Blockquote con cursiva y fuente tipográfica distinta */
+.cita-estilizada {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #475569;
+    padding: 12px 18px;
+    border-left: 4px solid #f59e0b;
+    background-color: #fffbeb;
+}
+
+/* ==========================================================================
+   4. MODELO DE CAJA
+   ========================================================================== */
+/*
+   EXPLICACIÓN MODELO DE CAJA:
+   - content-box (por defecto en CSS): el ancho y alto asignados aplican únicamente al contenido.
+     Si se suman padding y border, el tamaño real total del elemento en pantalla crece.
+   - border-box: el ancho y alto asignados incluyen el contenido, el padding y el border.
+     Esto facilita enormemente el maquetado, evitando desbordamientos no deseados.
+*/
+.tarjeta-box {
+    width: 260px;
+    background-color: #cfe1fc;
+    border: 2px solid #3b82f6;
+    padding: 16px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.566);
+}
+
+.tarjeta-box h4 {
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+.tarjeta-box p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* ==========================================================================
+   5. DISPLAY Y VISIBILITY
+   ========================================================================== */
+.contenedor-display {
+    margin-bottom: 18px;
+}
+
+.contenedor-display h3 {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+/* Base común para las tarjetas de prueba */
+.card-demo {
+    width: 140px;
+    height: 70px;
+    background-color: #e0e7ff;
+    border: 1px solid #6366f1;
+    color: #312e81;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 6px;
+}
+
+/* Display: Block (se apilan verticalmente ocupando toda la línea) */
+.card-block {
+    display: block;
+}
+
+/* Display: Inline (se colocan uno tras otro pero pierden dimensiones width/height y padding vertical estricto) */
+.card-inline {
+    display: inline;
+}
+
+/* Display: Inline-Block (quedan alineados horizontalmente conservando ancho, alto y modelo de caja) */
+.card-inline-block {
+    display: inline-block;
+}
+
+/* Estados de visibilidad */
+.btn-display-none {
+    display: none; /* No se renderiza ni reserva espacio */
+}
+
+.btn-visibility-hidden {
+    visibility: hidden; /* Se oculta pero conserva su hueco en pantalla */
+}
+
+.btn-visible {
+    padding: 8px 14px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.explicacion-visibilidad {
+    margin-top: 14px;
+    background-color: #f1f5f9;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.92rem;
+}
+
+/* ==========================================================================
+   6. VARIABLES APLICADAS
+   ========================================================================== */
+.tarjeta-variables {
+    width: 280px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    border: 2px solid var(--color-acento);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-variables h4 {
+    margin-bottom: 8px;
+    color: var(--color-acento);
+}
+
+.tarjeta-variables p {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 25px;
+}

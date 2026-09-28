@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico: Introducción a CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Trabajo Práctico: Introducción a CSS</h1>
+        
+    </header>
+
+    <main>
+        <!-- 1. Introducción a CSS -->
+        <section class="seccion">
+            <h2>1. Introducción a CSS</h2>
+            <p>
+                CSS significa Cascading Style Sheets (Hojas de Estilo en Cascada). Es el lenguaje encargado del diseño visual y presentación de documentos estructurados en HTML. Su objetivo principal es separar el contenido de la capa visual, permitiendo definir colores, márgenes, tipografías y diseños adaptables.
+            </p>
+            
+        </section>
+
+        <!-- 2. Selectores en CSS -->
+        <section class="seccion">
+            <h2>2. Selectores en CSS</h2>
+            <p id="parrafo-id">Este párrafo tiene un selector por ID.</p>
+            <p class="parrafo-class">Este párrafo tiene un selector por CLASS.</p>
+            <p>Este párrafo tiene un selector por TAG.</p>
+        </section>
+
+        <!-- 3. Modificación de Texto -->
+        <section class="seccion">
+            <h2>3. Modificación de Texto</h2>
+            <h3 class="titulo-sombra">Título con sombra y mayúsculas</h3>
+            <p class="texto-espaciado">
+                Este párrafo tiene mayor interlineado y espaciado entre letras para apreciar el efecto tipográfico en pantalla.
+            </p>
+            <blockquote class="cita-estilizada">
+                "La simplicidad es la máxima sofisticación en el diseño web."
+            </blockquote>
+        </section>
+
+        <!-- 4. Modelo de Caja -->
+        <section class="seccion">
+            <h2>4. Modelo de Caja</h2>
+            <div class="tarjeta-box">
+                <h4>Tarjeta de Perfil</h4>
+                <p>Esta tarjeta muestra border, padding, margin, background-color, border-radius y box-shadow.</p>
+            </div>
+        </section>
+
+        <!-- 5. Display y Visibility -->
+        <section class="seccion">
+            <h2>5. Display y Visibility</h2>
+            
+            <div class="contenedor-display">
+                <h3>Block</h3>
+                <div class="card-demo card-block">Tarjeta 1</div>
+                <div class="card-demo card-block">Tarjeta 2</div>
+                <div class="card-demo card-block">Tarjeta 3</div>
+            </div>
+
+            <div class="contenedor-display">
+                <h3>Inline</h3>
+                <div class="card-demo card-inline">Tarjeta 1</div>
+                <div class="card-demo card-inline">Tarjeta 2</div>
+                <div class="card-demo card-inline">Tarjeta 3</div>
+            </div>
+
+            <div class="contenedor-display">
+                <h3>Inline-block</h3>
+                <div class="card-demo card-inline-block">Tarjeta 1</div>
+                <div class="card-demo card-inline-block">Tarjeta 2</div>
+                <div class="card-demo card-inline-block">Tarjeta 3</div>
+            </div>
+
+            <div class="seccion-botones-visibilidad">
+                <button class="btn-display-none">Botón Display: None</button>
+                <button class="btn-visibility-hidden">Botón Visibility: Hidden</button>
+                <button class="btn-visible">Botón Visible de Referencia</button>
+                
+                <p class="explicacion-visibilidad">
+                    <strong>Diferencia:</strong> <code>display: none;</code> elimina el elemento del flujo visual del documento, por lo que no ocupa espacio en la pantalla; en cambio, <code>visibility: hidden;</code> vuelve invisible el elemento pero preserva intacto el espacio que ocupa en el layout.
+                </p>
+            </div>
+        </section>
+
+        <!-- 6. Variables CSS -->
+        <section class="seccion">
+            <h2>6. Variables CSS</h2>
+            <div class="tarjeta-variables">
+                <div class="cuadro-color-var"></div>
+                <h4>Tarjeta con Variables CSS</h4>
+                <p>El color de fondo, texto y borde se controlan dinámicamente mediante variables declaradas en <code>:root</code>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>Resolución del Trabajo Práctico 1 - Programación 3</p>
+    </footer>
+
+</body>
+</html>

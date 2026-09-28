@@ -1,0 +1,378 @@
+/* ==========================================================================
+   BLOQUE 2: RESET Y VARIABLES CSS
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Paleta de Colores */
+    --bg: #f8fafc;
+    --panel: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --primary-600: #1d4ed8;
+    --primary-700: #1e40af;
+    --accent: #16a34a;
+    --danger: #dc2626;
+    --danger-600: #b91c1c;
+
+    /* Estructura y Sombras */
+    --radius: 14px;
+    --shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+    --container: 1100px;
+
+    /* Escala de Espacios */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+/* ==========================================================================
+   LAYOUT Y CONTENEDOR GENERAL
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--space-6) var(--space-4);
+}
+
+/* ==========================================================================
+   BLOQUE 2: HEADER RESPONSIVO Y STICKY
+   ========================================================================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--panel);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.site-header__container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+    color: var(--text);
+}
+
+.site-header__logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.site-header__name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Menú de navegación */
+.site-header__menu {
+    display: flex;
+    list-style: none;
+    gap: var(--space-6);
+}
+
+.site-header__link {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.site-header__link:hover {
+    color: var(--primary);
+}
+
+/* Botón Hamburguesa */
+.site-header__btn-menu {
+    display: none;
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: var(--space-2);
+    padding: var(--space-2);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-header__icon-menu {
+    width: 22px;
+    height: 22px;
+}
+
+/* ==========================================================================
+   COMPONENTES: PANELES Y GRID
+   ========================================================================== */
+.panel {
+    background: var(--panel);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.panel__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--text);
+}
+
+.code-note {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.panel--section {
+    padding: var(--space-8) var(--space-6);
+}
+
+/* ==========================================================================
+   BLOQUE 3: SISTEMA DE BOTONES (BEM & FLEX)
+   ========================================================================== */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+/* Clase Base .btn */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-height: 42px;
+    padding: var(--space-2) var(--space-5);
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 9999px; /* Aspecto redondeado estilo píldora como en la muestra */
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Variantes */
+.btn--primary {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    background-color: var(--primary-600);
+}
+
+.btn--primary:active {
+    background-color: var(--primary-700);
+}
+
+.btn--secondary {
+    background-color: #e2e8f0;
+    color: var(--text);
+}
+
+.btn--secondary:hover {
+    background-color: #cbd5e1;
+}
+
+.btn--outline {
+    background-color: transparent;
+    border-color: #cbd5e1;
+    color: var(--primary);
+}
+
+.btn--outline:hover {
+    background-color: #f1f5f9;
+    border-color: var(--primary);
+}
+
+.btn--danger {
+    background-color: var(--danger);
+    color: #ffffff;
+}
+
+.btn--danger:hover {
+    background-color: var(--danger-600);
+}
+
+.btn--icon .btn__icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Estado Deshabilitado */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--muted);
+}
+
+/* ==========================================================================
+   BLOQUE 4: TARJETA DE PRODUCTO (.product-card)
+   ========================================================================== */
+.product-card {
+    max-width: 340px;
+    background: var(--panel);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.product-card__media {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    background-color: #f1f5f9;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+}
+
+.product-card__badge {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    background-color: #f59e0b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    text-transform: capitalize;
+}
+
+.product-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la zapatilla sin deformarla */
+}
+
+.product-card__info {
+    padding-top: var(--space-4);
+}
+
+.product-card__name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: var(--space-2);
+}
+
+.product-card__desc {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.4;
+    margin-bottom: var(--space-4);
+}
+
+.product-card__pricing {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+
+.product-card__price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.product-card__old-price {
+    font-size: 0.95rem;
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
+.product-card__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.btn--full {
+    flex: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (DESKTOP & MOBILE)
+   ========================================================================== */
+/* Disposición en pantallas de escritorio / tabletas anchas */
+@media (min-width: 769px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: var(--space-6);
+        align-items: start;
+    }
+}
+
+/* Disposición Mobile */
+@media (max-width: 768px) {
+    .site-header__nav {
+        display: none; /* Se ocultan los enlaces en mobile */
+    }
+
+    .site-header__btn-menu {
+        display: flex; /* Se visualiza el botón hamburguesa */
+    }
+
+    .main-grid {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+}
