@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Api de los simpsons</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- 1. Header -->
+    <header class="header">
+      <h1 class="title">Api de los simpsons</h1>
+      <p class="subtitle">Explora los personajes y sus frases célebres</p>
+    </header>
+
+    <!-- 2. Section de controles -->
+    <section class="controls-section">
+      <button id="btn-load" class="btn-primary" type="button">Cargar Personajes</button>
+    </section>
+
+    <!-- 4. Mensajes de error (oculto por defecto) -->
+    <div id="error-message" class="error-container hidden" role="alert"></div>
+
+    <!-- 3. Section de loading (oculto por defecto) -->
+    <section id="loading-section" class="loading-section hidden">
+      <div class="spinner"></div>
+      <p class="loading-text">Cargando personajes...</p>
+    </section>
+
+    <!-- 5. Section para mostrar los personajes -->
+    <section id="characters-container" class="characters-grid">
+      <!-- Las tarjetas se inyectan dinámicamente aquí -->
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="footer">
+      <p>
+        Datos obtenidos de
+        <a href="https://thesimpsonsapi.com/" target="_blank" rel="noopener noreferrer">
+          The Simpsons API
+        </a>
+      </p>
+    </footer>
+  </div>
+
+  <!-- 7. Script tag con type="module" -->
+  <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
