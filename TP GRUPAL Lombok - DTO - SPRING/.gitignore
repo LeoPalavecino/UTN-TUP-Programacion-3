@@ -1,0 +1,10 @@
+target/
+data/
+*.log
+.idea/
+.vscode/
+frontend/node_modules/
+.DS_Store
+facturas.mv.db
+facturas.trace.db
+facturas.lock.db
