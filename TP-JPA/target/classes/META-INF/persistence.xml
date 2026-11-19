@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+    <!-- Unidad de persistencia solicitada en la consigna -->
+    <persistence-unit name="FacturacionPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Registro explícito de clases del modelo de dominio -->
+        <class>prog3.tp.jpa.dominio.EntityId</class>
+        <class>prog3.tp.jpa.dominio.AuditoriaApp</class>
+        <class>prog3.tp.jpa.dominio.Usuario</class>
+        <class>prog3.tp.jpa.dominio.Rubro</class>
+        <class>prog3.tp.jpa.dominio.Marca</class>
+        <class>prog3.tp.jpa.dominio.Articulo</class>
+        <class>prog3.tp.jpa.dominio.ListaPrecio</class>
+        <class>prog3.tp.jpa.dominio.ListaPrecioArticulo</class>
+        <class>prog3.tp.jpa.dominio.Contacto</class>
+        <class>prog3.tp.jpa.dominio.Domicilio</class>
+        <class>prog3.tp.jpa.dominio.Cliente</class>
+        <class>prog3.tp.jpa.dominio.CondicionIva</class>
+        <class>prog3.tp.jpa.dominio.TipoMoneda</class>
+        <class>prog3.tp.jpa.dominio.PuntoVenta</class>
+        <class>prog3.tp.jpa.dominio.FacturaVenta</class>
+        <class>prog3.tp.jpa.dominio.FacturaVentaDetalle</class>
+        
+        <properties>
+            <!-- Conexión JDBC a PostgreSQL -->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/db_facturacion"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            
+            <!-- Insertar la contraseña del usuario postgres, en "value" -->
+            <property name="javax.persistence.jdbc.password" value="basededatos"/>
+
+            <!-- Dialecto SQL para PostgreSQL -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL10Dialect"/>
+
+            <!-- Propiedades solicitadas por la consigna -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>

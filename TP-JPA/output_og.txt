@@ -1,0 +1,112 @@
+cd C:\Users\leomo\Documents\NetBeansProjects\TP-JPA; "JAVA_HOME=C:\\Program Files\\Java\\jdk-21.0.10" cmd /c "\"C:\\Users\\leomo\\Documents\\LEONARDO\\UTN - TUP\\2º SEMESTRE\\PROGRAMACION 2\\Instaladores Java\\netbeans-29-bin\\netbeans\\java\\maven\\bin\\mvn.cmd\" -Dexec.vmArgs= \"-Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}\" \"-Dexec.executable=C:\\Program Files\\Java\\jdk-21.0.10\\bin\\java.exe\" -Dexec.mainClass=prog3.tp.jpa.Main -Dexec.classpathScope=runtime -Dexec.appArgs= \"-Dmaven.ext.class.path=C:\\Users\\leomo\\Documents\\LEONARDO\\UTN - TUP\\2º SEMESTRE\\PROGRAMACION 2\\Instaladores Java\\netbeans-29-bin\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar\" process-classes org.codehaus.mojo:exec-maven-plugin:3.5.1:exec"
+Scanning for projects...
+
+----------------------< com.tp:tp-jpa-hibernate >-----------------------
+Building tp-jpa-hibernate 1.0-SNAPSHOT
+  from pom.xml
+--------------------------------[ jar ]---------------------------------
+
+--- resources:3.3.1:resources (default-resources) @ tp-jpa-hibernate ---
+Copying 1 resource from src\main\resources to target\classes
+
+--- compiler:3.11.0:compile (default-compile) @ tp-jpa-hibernate ---
+Nothing to compile - all classes are up to date
+
+--- exec:3.5.1:exec (default-cli) @ tp-jpa-hibernate ---
+oct 01, 2026 6:13:11 P.�M. org.hibernate.jpa.internal.util.LogHelper logPersistenceUnitInformation
+INFO: HHH000204: Processing PersistenceUnitInfo [name: FacturacionPU]
+oct 01, 2026 6:13:11 P.�M. org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 5.6.15.Final
+oct 01, 2026 6:13:11 P.�M. org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+oct 01, 2026 6:13:11 P.�M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+oct 01, 2026 6:13:11 P.�M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/db_facturacion]
+oct 01, 2026 6:13:11 P.�M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=postgres}
+oct 01, 2026 6:13:11 P.�M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+oct 01, 2026 6:13:11 P.�M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH000115: Hibernate connection pool size: 20 (min=1)
+oct 01, 2026 6:13:12 P.�M. org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+oct 01, 2026 6:13:13 P.�M. org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@52a33c3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+oct 01, 2026 6:13:13 P.�M. org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: 
+    insert 
+    into
+        usuarios
+        (apellido, clave, nombre, usuario) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        puntos_venta
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, descripcion, domicilioComercial, numero, tipoEmision) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        rubros
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, codigo, denominacion) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        marcas
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, codigo, denominacion) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        articulos
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, codigo, denominacion, id_marca, id_rubro) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        listas_precios
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, codigo, denominacion) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        listas_precios_articulos
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, id_articulo, id_lista_precio, precioVenta) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        facturas_venta
+        (fechaAlta, fechaBaja, fechaModificacion, id_usuario_baja, id_usuario_carga, id_usuario_modificacion, cae, caeFechaVencimiento, estado, fechaAnulacion, fechaEmision, importeCobrado, importeSaldo, importeTotal, motivoRechazo, numero, observaciones, id_punto_venta, resultadoAfip) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        facturas_venta_detalles
+        (cantidad, descripcion, id_factura, importeIva, importeNeto, importeSubtotal, id_lista_precio_articulo, porcentajeBonificacion, precioUnitario) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+--------------------------------------------------
+Factura persistida con �xito. ID: 2
+Detalle persistido por cascada. ID: 2
+--------------------------------------------------
+oct 01, 2026 6:13:14 P.�M. org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PoolState stop
+INFO: HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/db_facturacion]
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time:  4.313 s
+Finished at: 2026-10-01T18:13:14-03:00
+------------------------------------------------------------------------
